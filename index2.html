@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Volt Bag</title>
+  </head>
+  <body>
+    <!-- HEADER OG NAV -->
+
+    <header>
+      <nav>
+        <img src="volt-01.png" alt="Volt logo" />
+        <ul>
+          <li>
+            <img id="insta" src="instagram-logo.png" alt="Volt instagram" />
+          </li>
+          <li>
+            <img id="twit" src="twitter.png" alt="Volt Twitter" />
+          </li>
+          <li>
+            <img id="face" src="afcebook.png" alt="Volt Facebook" />
+          </li>
+          <li>
+            HOME
+          </li>
+          <li>
+            SERVICES
+          </li>
+          <li>
+            PORTFOLIO
+          </li>
+          <li>
+            TESTIMONTIALS
+          </li>
+          <li>
+            CONTACT
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- PROGRESS BAR -->
+    <div class="container">
+      <ul class="progressbar">
+        <li class="active">
+          <a href="index2.html"> BAG</a>
+        </li>
+        <li><a href="order.html"> ORDER</a></li>
+        <li>
+          <a href="pay.html"> PAYMENT</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- FORM-->
+    <div class="modal">
+      <div class="modal__container">
+        <div class="modal__featured">
+          <div class="modal__circle"></div>
+          <img src="Volt-Charger.png" class="modal__product" />
+          <p class="modal__product2">
+            100% depositum tilbage <br />
+            Du kan altid afbestille <br />
+            100% batteri i lommen
+          </p>
+        </div>
+        <div class="modal__content">
+          <h2>VOLT BYTTE SERVICE</h2>
+
+          <form>
+            <ul class="form-list">
+              <li class="form-list__row">
+                <label>Antal</label><br />
+                <input type="number" name="" required="" value="1" />
+              </li>
+
+              <li class="form-list__row2">
+                <h2>Lej eller medbring din egen Volt oplader</h2>
+
+                <label>
+                  <input type="radio" name="save_cc" />
+                  Jeg medbringer min egen Volt oplader
+                </label>
+                <label>
+                  <input type="radio" name="save_cc" checked="checked" />
+                  Jeg ønsker at leje en Volt oplader (200 kr.)
+                </label>
+              </li>
+              <li>
+                <button type="submit" class="button">Videre</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <!-- END: .modal__content -->
+      </div>
+      <!-- END: .modal__container -->
+    </div>
+    <!-- END: .modal -->
+    <script src="javascript.js"></script>
+  </body>
+</html>

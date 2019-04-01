@@ -1,0 +1,25 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watchsass": "node-sass --output-style expanded myfile.scss output.css -w",
+    "watchsass_order": "node-sass --output-style expanded myfile-order.scss output-order.css -w",
+    "watchsass_pay": "node-sass --output-style expanded myfile-pay.scss output-pay.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milleprintzlau/volt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milleprintzlau/volt/issues"
+  },
+  "homepage": "https://github.com/milleprintzlau/volt#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="output-pay.css" />
+    <title>Payment</title>
+  </head>
+  <body>
+    <!-- HEADER OG NAV -->
+
+    <header>
+      <nav>
+        <img src="volt-01.png" alt="Volt logo" />
+        <ul>
+          <li>
+            <img id="insta" src="instagram-logo.png" alt="Volt instagram" />
+          </li>
+          <li>
+            <img id="twit" src="twitter.png" alt="Volt Twitter" />
+          </li>
+          <li>
+            <img id="face" src="afcebook.png" alt="Volt Facebook" />
+          </li>
+          <li>
+            HOME
+          </li>
+          <li>
+            SERVICES
+          </li>
+          <li>
+            PORTFOLIO
+          </li>
+          <li>
+            TESTIMONTIALS
+          </li>
+          <li>
+            CONTACT
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- PROGRESS BAR -->
+    <div class="container">
+      <ul class="progressbar">
+        <li class="wasactive">
+          <a href="index2.html"> BAG</a>
+        </li>
+        <li class="wasactive">
+          <a href="order.html"> ORDER</a>
+        </li>
+        <li class="active">
+          <a href="pay.html"> PAYMENT</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- YOUR ORDER OVERBLIK-->
+    <div class="modal">
+      <div class="modal__container">
+        <div class="modal__featured">
+          <div class="modal__circle"></div>
+          <img src="Volt-Charger.png" class="modal__product" />
+          <p class="modal__product2">
+            100% depositum tilbage <br />
+            Du kan altid afbestille <br />
+            100% batteri i lommen
+          </p>
+        </div>
+        <div class="modal__content">
+          <h2>YOUR ORDER</h2>
+          <div class="order-content">
+            <p>1X</p>
+            <p>Swapping Service</p>
+            <p><strong>179 DKK</strong></p>
+          </div>
+          <div class="order-content">
+            <p>1X</p>
+            <p>Volt Charger Deposit</p>
+            <p><strong>200 DKK</strong></p>
+          </div>
+          <h2 id="total">Total 379 DKK</h2>
+          <!-- <form>
+            <ul class="form-list">
+              <li class="form-list__row">
+                <label>Firstname</label> <br />
+                <input type="text" name="" required="" placeholder="Anders" />
+              </li>
+              <li class="form-list__row">
+                <label>Lastname</label> <br />
+                <input
+                  type="text"
+                  name=""
+                  required=""
+                  placeholder="Kristoffersen"
+                />
+              </li>
+
+              <li>
+                <button type="submit" class="button">Videre</button>
+              </li>
+            </ul>
+          </form> -->
+        </div>
+        <!-- END: .modal__content -->
+      </div>
+      <!-- END: .modal__container -->
+    </div>
+    <!-- END: .modal -->
+
+    <!-- YOUR ORDER OVERBLIK-->
+    <div class="wrapper">
+      <div class="modal3">
+        <div class="modal__container2">
+          <div class="modal__featured2">
+            <div class="modal__circle2"></div>
+          </div>
+          <div class="modal__content2">
+            <h2>DELIVERY OPTIONS</h2>
+            <form>
+              <ul class="form-list">
+                <li class="form-list__row">
+                  <input
+                    type="button"
+                    name=""
+                    required=""
+                    value="Pick up at festival or Volt CPH (FREE)"
+                  />
+                </li>
+                <li class="form-list__row">
+                  <input
+                    type="button"
+                    name=""
+                    required=""
+                    value="Shipped to home (50 DKK)"
+                  />
+                </li>
+              </ul>
+            </form>
+          </div>
+          <!-- END: .modal__content -->
+        </div>
+        <!-- END: .modal__container -->
+      </div>
+      <div class="modal2">
+        <div class="modal__container2">
+          <div class="modal__featured2">
+            <div class="modal__circle2"></div>
+          </div>
+          <div class="modal__content2">
+            <h2>HOW DO YOU WANT TO PAY?</h2>
+
+            <div class="img-wrap">
+              <img src="PayPal-Logo-Vector-Image.png" alt="Paypal" />
+              <img src="mobile-pay-logo-2.png" alt="Mobilpay" />
+              
+              <div class="dropdown">
+                    
+                <img id="visa" src="visa.png" alt="VISA logo" class="accordion">
+                <div id="myDropdown" class="panel">
+                        <form>
+                                <ul class="form-list">
+                                  <li class="form-list__row">
+                                    <label>Name</label>
+                                    <input type="text" name="" required="" />
+                                  </li>
+                                  <li class="form-list__row">
+                                    <label>Card Number</label>
+                                    <div id="input--cc" class="creditcard-icon">
+                                      <input type="text" name="cc_number" required="" />
+                                    </div>
+                                  </li>
+                                  <li class="form-list__row form-list__row--inline">
+                                    <div>
+                                      <label>Expiration Date</label>
+                                      <div class="form-list__input-inline">
+                                        <input type="text" name="cc_month" placeholder="MM"  pattern="\\d*" minlength="2" maxlength="2" required="" />
+                                        <input type="text" name="cc_year" placeholder="YY"  pattern="\\d*" minlength="2" maxlength="2" required="" />
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label>
+                                        CVC
+                                      </label>
+                                      <input type="text" name="cc_cvc" placeholder="123" pattern="\\d*" minlength="3" maxlength="4" required="" />
+                                    </div>
+                                  </li>
+                                  <button type="submit" class="button">CONFIRM</button>
+                                </ul>
+                              </form>
+                </div>
+                </div>
+              </div>
+     
+              
+            </div>
+          </div>
+          <!-- END: .modal__content -->
+        </div>
+        <!-- END: .modal__container -->
+      </div>
+    </div>
+
+    <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+/*             function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            } */
+            var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+            </script>
+  </body>
+</html>

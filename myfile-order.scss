@@ -1,0 +1,273 @@
+/* GENERELT */
+html,
+body {
+  margin: 0;
+  line-height: 2;
+  font-family: Helvetica, sans-serif;
+  color: #000000;
+  width: 100%;
+  height: 100%;
+
+  background: url(Artboard5.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+  color: #ddd;
+}
+img {
+  width: 100%;
+}
+
+/* NAVIGAION/MENU */
+header {
+  background-color: #e5ebb3;
+
+  img {
+    width: 100px;
+    margin-top: 0.6vw;
+    margin-left: 5vw;
+  }
+
+  nav {
+    width: 100%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    font-family: Helvetica, sans-serif;
+    color: #313131;
+    cursor: pointer;
+    font-size: 12px;
+    left: 0;
+    padding-left: 1vw;
+    margin-top: 1.5vw;
+  }
+
+  nav ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+  }
+
+  li img {
+    width: 40px;
+    margin: 0;
+  }
+
+  #insta {
+    width: 15px;
+  }
+
+  #twit {
+    width: 15px;
+  }
+  #face {
+    width: 8px;
+    margin-right: 3vw;
+  }
+}
+
+/* PROGRESS BAR */
+
+.container {
+  width: 100%;
+}
+
+.progressbar {
+  counter-reset: step;
+}
+.progressbar li {
+  list-style: none;
+  display: inline-block;
+  width: 30%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  color: #ddd;
+}
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 2px solid #ddd;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-color: white;
+}
+.progressbar li.wasactive:before {
+  background-color: #c3d537;
+  border: none;
+  color: white;
+}
+.progressbar li.wasactive a {
+  color: #c3d537;
+}
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active a {
+  color: #c3d537;
+}
+.progressbar li.active:before {
+  border-color: #c3d537;
+}
+.progressbar li.wasactive + li::after {
+  background-color: #c3d537;
+}
+
+/* FORM*/
+
+.button {
+  color: #ffffff;
+  background-color: #6bc1ff;
+  padding: 12px 25px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 20px;
+  outline: 0;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+button:hover,
+button:active,
+button:focus {
+  transform: scale(1.1);
+}
+input {
+  min-height: 30px;
+  width: 90%;
+  padding-left: 5px;
+  padding-right: 5px;
+  letter-spacing: 0.5px;
+  border: 0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+input[type="tel"] {
+  width: 30%;
+}
+
+input:valid {
+  border-color: #24cf5f;
+}
+input:focus {
+  outline: none;
+  border-color: #c3d537;
+}
+
+.form-list {
+  padding-left: 0;
+  list-style: none;
+}
+.form-list__row {
+  margin-bottom: 25px;
+}
+.form-list__row label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #939393;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vw;
+}
+.modal__container {
+  display: flex;
+  width: 675px;
+  height: 100%;
+  margin-bottom: 125px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+}
+.modal__featured {
+  position: relative;
+  flex: 1;
+  min-width: 230px;
+  padding: 20px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.modal__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  background-color: #c3d537;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-25%);
+}
+.modal__product {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  max-width: 85%;
+  transform: translateX(calc(-50% - 10px));
+}
+
+.modal__product2 {
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  width: 100%;
+  transform: translateX(calc(-50% - 10px));
+  font-size: 12px;
+  line-height: 2;
+  color: white;
+}
+.modal__content {
+  padding: 40px 30px;
+  width: 700px;
+}
+
+.fb-but {
+  height: 40px;
+  width: 200px;
+  color: white;
+  background-color: #4167b2;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.hej {
+  text-align: center;
+  p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
