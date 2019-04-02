@@ -159,32 +159,30 @@
                     
                 <img id="visa" src="visa.png" alt="VISA logo" class="accordion">
                 <div id="myDropdown" class="panel">
-                        <form>
+                        <form id="add">
                                 <ul class="form-list">
                                   <li class="form-list__row">
                                     <label>Name</label>
-                                    <input type="text" name="" required="" />
+                                    <input type="text" name="navnet" required="" />
                                   </li>
                                   <li class="form-list__row">
                                     <label>Card Number</label>
                                     <div id="input--cc" class="creditcard-icon">
-                                      <input type="text" name="cc_number" required="" />
+                                      <input type="text" name="kort" required="" />
                                     </div>
                                   </li>
                                   <li class="form-list__row form-list__row--inline">
                                     <div>
                                       <label>Expiration Date</label>
                                       <div class="form-list__input-inline">
-                                        <input type="text" name="cc_month" placeholder="MM"  pattern="\\d*" minlength="2" maxlength="2" required="" />
-                                        <input type="text" name="cc_year" placeholder="YY"  pattern="\\d*" minlength="2" maxlength="2" required="" />
+                                        <input type="text" name="maaned" placeholder="MM"   required="" />
+                                        <input type="text" name="aar" placeholder="YY" required="" />
                                       </div>
                                     </div>
-                                    <div>
-                                      <label>
-                                        CVC
-                                      </label>
-                                      <input type="text" name="cc_cvc" placeholder="123" pattern="\\d*" minlength="3" maxlength="4" required="" />
-                                    </div>
+                                    <label>
+                                      CVC
+                                    </label> <br>
+                                    <input class="cvc" type="text" name="cvc" placeholder="123" required="" />
                                   </li>
                                   <button type="submit" class="button">CONFIRM</button>
                                 </ul>
@@ -236,6 +234,39 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+//POST
+function post(nyTodo) {
+        //sends a request to add new data to the datasheet
+        const postData = JSON.stringify(nyTodo);
+        fetch("https://voltdata-09ff.restdb.io/rest/data?", {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json; charset=utf-8",
+            "x-apikey": "5ca316b8df5d634f46ecb16f",
+            "cache-control": "no-cache"
+          },
+          body: postData
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+          });
+      }
+      const formular = document.querySelector("#add");
+      formular.addEventListener("submit", e => {
+        formular.elements.kort.disabled = true; //Ikke nødvendig
+        e.preventDefault();
+        console.log("submitted");
+        const payload = {
+          kort: formular.elements.kort.value,
+          navn: formular.elements.navnet.value,
+          maaned: formular.elements.maaned.value,
+          aar: formular.elements.aar.value,
+          cvc: formular.elements.cvc.value
+        };
+        post(payload);
+      });
             </script>
   </body>
 </html>

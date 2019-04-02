@@ -405,3 +405,7 @@ input[type="button"]:focus {
   grid-template-columns: auto auto;
   grid-gap: 30px;
 }
+
+.cvc {
+  width: 35px;
+}
