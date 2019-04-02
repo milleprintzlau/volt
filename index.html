@@ -41,12 +41,64 @@
         </ul>
       </nav>
     </header>
+    <!-- PROGRESS BAR -->
     <div class="container">
       <ul class="progressbar">
-        <li class="active">BAG</li>
-        <li>ORDER</li>
-        <li>PAYMENT</li>
+        <li class="active">
+          <a href="index.html"> BAG</a>
+        </li>
+        <li><a href="order.html"> ORDER</a></li>
+        <li>
+          <a href="pay.html"> PAYMENT</a>
+        </li>
       </ul>
     </div>
+
+    <!-- FORM-->
+    <div class="modal">
+      <div class="modal__container">
+        <div class="modal__featured">
+          <div class="modal__circle"></div>
+          <img src="Volt-Charger.png" class="modal__product" />
+          <p class="modal__product2">
+            100% deposit returned <br />
+            You can always cancel the order <br />
+            100% battery in your pocket
+          </p>
+        </div>
+        <div class="modal__content">
+          <h2>VOLT SWAPPING SERVICE</h2>
+
+          <form action="order.html">
+            <ul class="form-list">
+              <li class="form-list__row">
+                <label>Amount</label><br />
+                <input type="number" name="" required="" value="1" />
+              </li>
+
+              <li class="form-list__row2">
+                <h2>Rent or bring your own Volt charger</h2>
+
+                <label>
+                  <input type="radio" name="save_cc" />
+                  I bring my own Volt charger
+                </label>
+                <label>
+                  <input type="radio" name="save_cc" checked="checked" />
+                  I want to rent a Volt charger (200 DKK)
+                </label>
+              </li>
+              <li>
+                <button type="submit" class="button">Next</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <!-- END: .modal__content -->
+      </div>
+      <!-- END: .modal__container -->
+    </div>
+    <!-- END: .modal -->
+    <script src="javascript.js"></script>
   </body>
 </html>
