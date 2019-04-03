@@ -154,56 +154,77 @@
             <div class="img-wrap">
               <img src="PayPal-Logo-Vector-Image.png" alt="Paypal" />
               <img src="mobile-pay-logo-2.png" alt="Mobilpay" />
-              
+
               <div class="dropdown">
-                    
-                <img id="visa" src="visa.png" alt="VISA logo" class="accordion">
+                <img
+                  id="visa"
+                  src="visa.png"
+                  alt="VISA logo"
+                  class="accordion"
+                />
                 <div id="myDropdown" class="panel">
-                        <form id="add">
-                                <ul class="form-list">
-                                  <li class="form-list__row">
-                                    <label>Name</label>
-                                    <input type="text" name="navnet" required="" />
-                                  </li>
-                                  <li class="form-list__row">
-                                    <label>Card Number</label>
-                                    <div id="input--cc" class="creditcard-icon">
-                                      <input type="text" name="kort" required="" />
-                                    </div>
-                                  </li>
-                                  <li class="form-list__row form-list__row--inline">
-                                    <div>
-                                      <label>Expiration Date</label>
-                                      <div class="form-list__input-inline">
-                                        <input type="text" name="maaned" placeholder="MM"   required="" />
-                                        <input type="text" name="aar" placeholder="YY" required="" />
-                                      </div>
-                                    </div>
-                                    <label>
-                                      CVC
-                                    </label> <br>
-                                    <input class="cvc" type="text" name="cvc" placeholder="123" required="" />
-                                  </li>
-                                  <button type="submit" class="button">CONFIRM</button>
-                                </ul>
-                              </form>
-                </div>
+                  <form id="add">
+                    <ul class="form-list">
+                      <li class="form-list__row">
+                        <label>Name</label>
+                        <input type="text" name="navnet" required="" />
+                      </li>
+                      <li class="form-list__row">
+                        <label>Card Number</label>
+                        <div id="input--cc" class="creditcard-icon">
+                          <input type="text" name="kort" required="" />
+                        </div>
+                      </li>
+                      <li class="form-list__row form-list__row--inline">
+                        <div>
+                          <label>Expiration Date</label>
+                          <div class="form-list__input-inline">
+                            <input
+                              type="text"
+                              name="maaned"
+                              placeholder="MM"
+                              required=""
+                            />
+                            <input
+                              type="text"
+                              name="aar"
+                              placeholder="YY"
+                              required=""
+                            />
+                          </div>
+                        </div>
+                        <label>
+                          CVC
+                        </label>
+                        <br />
+                        <input
+                          class="cvc"
+                          type="text"
+                          name="cvc"
+                          placeholder="123"
+                          required=""
+                        />
+                      </li>
+
+                      <button type="submit" class="button">
+                        <a href="done.html">CONFIRM </a>
+                      </button>
+                    </ul>
+                  </form>
                 </div>
               </div>
-     
-              
             </div>
           </div>
-          <!-- END: .modal__content -->
         </div>
-        <!-- END: .modal__container -->
+        <!-- END: .modal__content -->
       </div>
+      <!-- END: .modal__container -->
     </div>
 
     <script>
-            /* When the user clicks on the button, 
+      /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
-/*             function myFunction() {
+      /*             function myFunction() {
               document.getElementById("myDropdown").classList.toggle("show");
             }
             
@@ -220,23 +241,22 @@
                 }
               }
             } */
-            var acc = document.getElementsByClassName("accordion");
-var i;
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
 
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-
-//POST
-function post(nyTodo) {
+      //POST
+      function post(nyTodo) {
         //sends a request to add new data to the datasheet
         const postData = JSON.stringify(nyTodo);
         fetch("https://voltdata-09ff.restdb.io/rest/data?", {
@@ -267,6 +287,6 @@ function post(nyTodo) {
         };
         post(payload);
       });
-            </script>
+    </script>
   </body>
 </html>
